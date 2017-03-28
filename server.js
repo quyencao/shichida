@@ -8,7 +8,7 @@ const {authenticate} = require('./middleware/authenticate');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 const { Sight, Phonic1 } = require('./data/index');
 const port = process.env.PORT || 8080;
