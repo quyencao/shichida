@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 const { Sight, Phonic1 } = require('./data/index');
 const port = process.env.PORT || 8080;
 
-app.get('/sight/:id', authenticate, (req, res) => {
+app.get('/sight/:id', (req, res) => {
     var id = req.params.id;
     res.send({
         data: Sight[`SIGHT_WORDS_${id}`]
